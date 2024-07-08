@@ -12,10 +12,11 @@ Additionally, it contains the profiler :ref:`TALP <talp_overview>`, that easily 
 To understand, which applications can benefit from :ref:`LeWI <lewi_overview>` or :ref:`DROM <drom_overview>`, we will have a look at the structure of a typical hybrid HPC application.
 As depicted in the picture below, we can see an application that will run processes on several nodes, and each process will spawn several threads.
 
-.. image:: images/hpc_app.png
+.. figure:: images/hpc_app.png
   :width: 300pt
   :align: center
-  :alt: Hybrid application
+  
+  Typical hybrid application structure
 
 DLB focuses on improving the load balance of the outer level of parallelism (e.g MPI) by redistributing the computational resources at the inner level of parallelism (e.g. OpenMP). This readjustment of resources will be done dynamically at run time.
 

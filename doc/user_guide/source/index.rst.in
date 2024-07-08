@@ -1,27 +1,55 @@
-.. DLB documentation master file, created by
-   sphinx-quickstart on Wed Jun 10 12:33:33 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+:orphan:
+
+.. only:: html
+
+  .. image:: images/dlb_logo.png
 
 Welcome to the DLB documentation!
 ===================================
+
+DLB is a collection of tools targeting HPC applications. 
+Its main goal is to help with the dynamic load balancing of hybrid codes, which use a nested parallelism model.
+Therefore, DLB provides components to modify ressources at runtime, as well as a profiler to gather performance metrics. 
 
 .. note::
    If you are new here, consider having a look at the :ref:`overview` first.
 
 
+
+
+
 .. toctree::
+    :caption: Getting started
     :maxdepth: 2
+    :hidden:
 
     overview
     installation
+    contents
     technical_requirements
-    installation
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: How To's
+    :hidden:
+
     how_to_run
+
+.. toctree::
+    :maxdepth: 2
+    :caption: API
+    :hidden:
+
     api
     advance_usage
+
+.. toctree::
+    :maxdepth: 2
+    :caption: FAQ
+    :hidden:
+
     faq
-    contents
 
 
 @SPHINX_HAS_MANPAGES@.. only:: html
