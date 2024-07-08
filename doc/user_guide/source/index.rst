@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to the DLB documentation!
-===============================
+===================================
 
 .. note::
    If you are new here, consider having a look at the :ref:`overview` first.
