@@ -11,7 +11,7 @@ build:
     python: "3.12"
   jobs:
     pre_build:
-      - ./boostrap
+      - ./bootstrap
       - ./configure
 
 
