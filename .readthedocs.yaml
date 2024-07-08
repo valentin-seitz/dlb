@@ -12,6 +12,7 @@ build:
   apt_packages:
     - autotools-dev
     - autoconf
+    - libtool
   jobs:
     pre_build:
       - ./bootstrap
