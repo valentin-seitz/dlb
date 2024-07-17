@@ -18,6 +18,7 @@ build:
   #  - ./bootstrap
   #  - ./configure
   commands:
+    - apt-get install -y autotools-dev autoconf libtool
     - ./bootstrap
     - ./configure
     - mkdir -p $READTHEDOCS_OUTPUT/html/ && mkdir -p $READTHEDOCS_OUTPUT/pdf/
