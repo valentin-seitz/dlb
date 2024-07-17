@@ -14,9 +14,9 @@ DLB provides components to **modify ressources at runtime**, as well as a profil
 .. note::
    If you are new here, consider having a look at the :ref:`overview` first.
 
-This online documentation is versioned and also available as PDF download. TODO: Add link
 
-To contribute please use our `GitHub repository <https://github.com/bsc-pm/dlb>`.
+If you want to contribute, please have a look at our `GitHub repository <https://github.com/bsc-pm/dlb/>`_.
+
 
 .. toctree::
     :caption: Getting started

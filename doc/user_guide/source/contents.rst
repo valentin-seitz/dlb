@@ -1,5 +1,5 @@
 ***********************
-Contents of DLB
+Contents of the installation
 ***********************
 
 Structure after installation
