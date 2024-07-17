@@ -22,9 +22,9 @@ build:
     - rm -rf $READTHEDOCS_OUTPUT/html/* && rm -rf $READTHEDOCS_OUTPUT/pdf/*
     - make doxygen
     - make html
-    - mv doc/user_guide/html $READTHEDOCS_OUTPUT/html
+    - mv doc/user_guide/html/* $READTHEDOCS_OUTPUT/html
     - make pdf
-    - mv doc/user_guide/pdf $READTHEDOCS_OUTPUT/pdf
+    - mv doc/user_guide/pdf/* $READTHEDOCS_OUTPUT/pdf
 
   #commands:
    # - ./bootstrap
