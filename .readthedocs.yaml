@@ -17,7 +17,13 @@ build:
     pre_build:
       - ./bootstrap
       - ./configure
-      - make doxygen
+  commands:
+    - mkdir -p $READTHEDOCS_OUTPUT/html/ && mkdir -p $READTHEDOCS_OUTPUT/pdf/
+    - make doxygen
+    - make html
+    - mv doc/user_guide/html $READTHEDOCS_OUTPUT/html
+    - make pdf
+    - mv doc/user_guide/pdf $READTHEDOCS_OUTPUT/pdf
 
 
 # Build documentation in the "docs/" directory with Sphinx
