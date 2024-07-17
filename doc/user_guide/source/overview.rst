@@ -53,6 +53,7 @@ DROM: Dynamic Resource Ownership Manager
 ========================================
 
 DROM offers an API to change the computational resources assigned to a process at run time.
+TODO: Extend here a bit
 
 .. figure:: images/drom.png
   :width: 300pt
@@ -67,11 +68,11 @@ DROM offers an API to change the computational resources assigned to a process a
 TALP: Tracking Application Live Performance
 ===========================================
 
-TALP is another module included in DLB that allows to measure the parallel efficiency
-of an execution by intercepting the MPI calls. The data obtained by TALP is available
-at run time during the execution, or as a report at the end.
+TALP is another module included in DLB that allows to measure the parallel efficiency and other performane metrics. 
+The data obtained by TALP is available at run time during the execution, or as a report at the end.
 
-.. image:: images/talp.png
+.. figure:: images/talp.png
   :width: 300pt
   :align: center
-  :alt: TALP
+  
+  TALP usage example: The collected metrics can be reported through different methods. 

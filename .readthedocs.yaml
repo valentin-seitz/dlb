@@ -17,6 +17,7 @@ build:
     pre_build:
       - ./bootstrap
       - ./configure
+      - make doxygen
 
 
 # Build documentation in the "docs/" directory with Sphinx

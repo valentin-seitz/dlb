@@ -13,49 +13,50 @@ Build requirements
 * Python 2.4 or higher
 
 
-Installation steps
-==================
+Installing a released version
+=============================
 
 #. Get the latest DLB *tarball* from https://pm.bsc.es/dlb-downloads. Unpack the
    file and enter the new directory::
 
-    $ tar xzf dlb-x.y.tar.gz
-    $ cd dlb-x.y/
+    tar xzf dlb-x.y.tar.gz
+    cd dlb-x.y/
 
 #. Configure it, with optionally some of the :ref:`DLB configure flags<dlb-configure-flags>`::
 
-   $ ./configure --prefix=<DLB_PREFIX> [--with-mpi]
+   ./configure --prefix=<DLB_PREFIX> [--with-mpi]
+
+#. Build and install::
+    
+    make
+    make install
+
+
+
+Installing from GitHub
+=============================
+
+.. note:: 
+    Additional dependencies are necessary to bootstrap the application. Please make sure to have **autotools**,
+    **autoconf** and **libtool** installed if you want to use the GitHub installation method.
+     
+
+#. Download an archive or `git clone` the repository from https://github.com/bsc-pm/dlb. Check-out the brach or tag and bootstrap::
+
+    git clone https://github.com/bsc-pm/dlb
+    cd dlb
+    ./bootstrap
+
+#. Configure it, with optionally some of the :ref:`DLB configure flags<dlb-configure-flags>`::
+
+   ./configure --prefix=<DLB_PREFIX> [--with-mpi]
 
 #. Build and install::
 
-   $ make
-   $ make install
+   make
+   make install
 
-Other installation methods
-==========================
 
-Downloading from git repository
--------------------------------
-
-If DLB is downloaded from https://github.com/bsc-pm/dlb or other git
-repository, additional software is needed, such as autoconf, automake, and
-libtool. Once the project is downloaded, run ``bootstrap.sh`` to generate the
-appropriate build files. Then, follow the installation steps described above.
-
-Meson
------
-
-DLB also offers the possibility to configure and build with Meson and Ninja.
-The current meson build script does not provide all the functionalities of the
-*autotools* scripts; mainly documentation and examples are not yet integrated,
-but it is a great alternative for developers or quick installations since it
-significantly improves the build and testing times.
-
-To set up a meson build directory and build, and install, simply run::
-
-    $ meson setup <build_dir> -Dmpi=enabled -Dprefix=<dlb_installation_prefix>
-    $ cd <build_dir>
-    $ ninja install
 
 .. _dlb-configure-flags:
 
@@ -122,3 +123,25 @@ interface compilation may be disabled.
 
 --disable-f08-mpi-interface
     Disable Fortran 2008 MPI interface
+
+
+
+
+Developer installation
+========================
+
+
+Meson
+-----
+
+DLB also offers the possibility to configure and build with Meson and Ninja.
+The current meson build script does not provide all the functionalities of the
+*autotools* scripts; mainly documentation and examples are not yet integrated,
+but it is a great alternative for developers or quick installations since it
+significantly improves the build and testing times.
+
+To set up a meson build directory and build, and install, simply run::
+
+    $ meson setup <build_dir> -Dmpi=enabled -Dprefix=<dlb_installation_prefix>
+    $ cd <build_dir>
+    $ ninja install

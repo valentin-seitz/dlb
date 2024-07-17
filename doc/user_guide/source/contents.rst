@@ -1,5 +1,5 @@
 ***********************
-Contents of the Package
+Contents of DLB
 ***********************
 
 Structure after installation

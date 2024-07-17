@@ -16,8 +16,6 @@ Therefore, DLB provides components to modify ressources at runtime, as well as a
 
 
 
-
-
 .. toctree::
     :caption: Getting started
     :maxdepth: 2
@@ -31,14 +29,30 @@ Therefore, DLB provides components to modify ressources at runtime, as well as a
 
 .. toctree::
     :maxdepth: 2
-    :caption: How To's
+    :caption: LeWI
     :hidden:
 
-    how_to_run
+    how_to_run_lewi
 
 .. toctree::
     :maxdepth: 2
-    :caption: API
+    :caption: DROM
+    :hidden:
+
+    how_to_run_drom
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: TALP
+    :hidden:
+
+    how_to_run_talp
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: API Documentation
     :hidden:
 
     api
