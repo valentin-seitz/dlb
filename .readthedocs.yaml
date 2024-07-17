@@ -13,11 +13,13 @@ build:
     - autotools-dev
     - autoconf
     - libtool
-  jobs:
-    pre_build:
-      - ./bootstrap
-      - ./configure
+  #jobs:
+  #  pre_build:
+  #  - ./bootstrap
+  #  - ./configure
   commands:
+    - ./bootstrap
+    - ./configure
     - mkdir -p $READTHEDOCS_OUTPUT/html/ && mkdir -p $READTHEDOCS_OUTPUT/pdf/
     - make doxygen
     - make html
