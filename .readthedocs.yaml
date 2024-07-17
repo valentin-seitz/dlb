@@ -19,6 +19,8 @@ build:
     - ./configure
     post_build:
     - mkdir -p $READTHEDOCS_OUTPUT/html/ && mkdir -p $READTHEDOCS_OUTPUT/pdf/
+    - rm -rf $READTHEDOCS_OUTPUT/html/* && rm -rf $READTHEDOCS_OUTPUT/pdf/*
+    - make doxygen
     - make html
     - mv doc/user_guide/html $READTHEDOCS_OUTPUT/html
     - make pdf
