@@ -17,9 +17,13 @@ build:
     pre_build:
     - ./bootstrap
     - ./configure
+    post_build:
     - mkdir -p $READTHEDOCS_OUTPUT/html/ && mkdir -p $READTHEDOCS_OUTPUT/pdf/
     - make html
+    - mv doc/user_guide/html $READTHEDOCS_OUTPUT/html
     - make pdf
+    - mv doc/user_guide/pdf $READTHEDOCS_OUTPUT/pdf
+
   #commands:
    # - ./bootstrap
    # - ./configure
