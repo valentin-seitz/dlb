@@ -2,7 +2,10 @@
 # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
 
 version: 2
-
+formats: [html, pdf]
+sphinx:
+  configuration: docs/user_guide/source/conf.py
+  
 build:
   os: ubuntu-22.04
   tools:
