@@ -21,6 +21,7 @@ build:
       - git fetch --unshallow || true
       - git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' || true
       - git fetch --all --tags || true
+      - git fetch -a || true
     pre_build:
     - ./bootstrap
     - ./configure
