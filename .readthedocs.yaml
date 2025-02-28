@@ -3,7 +3,7 @@
 
 version: 2
 sphinx:
-  configuration: docs/user_guide/source/conf.py
+  configuration: docs/user_guide/source/conf.py.in
   
 build:
   os: ubuntu-22.04
