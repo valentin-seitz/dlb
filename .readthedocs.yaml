@@ -18,6 +18,8 @@ build:
     - libtool
     - graphviz
   jobs:
+    post_checkout:
+      - git fetch --unshallow || true
     pre_build:
     - ./bootstrap
     - ./configure
