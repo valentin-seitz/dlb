@@ -6,7 +6,7 @@ version: 2
 formats: [pdf,htmlzip]
 
 sphinx:
-  configuration: doc/user_guide/source/conf.py
+  configuration: doc/user_guide/source/conf.py.in
 
 build:
   os: ubuntu-22.04
