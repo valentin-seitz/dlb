@@ -19,7 +19,6 @@ build:
     - graphviz
   jobs:
     pre_build:
-    - rm doc/user_guide/source/conf.py
     - ./bootstrap
     - ./configure
     post_build:
