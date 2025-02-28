@@ -946,6 +946,8 @@ doc: html pdf
 
 doc-check: doc-linkcheck
 
+sphinx-manpages: $(sphinx_manpages_files)
+
 doc-linkcheck: $(sphinx_manpages_files)
 	$(SPHINXBUILD) -b linkcheck $(SPHINX_FLAGS) $(SPHINX_SRC_DIR) doc/user_guide/linkcheck
 	@echo
@@ -980,6 +982,7 @@ pdf-local: nodoc
 install-pdf-local: nodoc
 doc-linkcheck: nodoc
 doc-check: nodoc
+sphinx-manpages: nodoc
 endif
 
 #********************************************************************************
