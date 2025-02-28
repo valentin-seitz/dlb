@@ -21,7 +21,7 @@ build:
     pre_build:
     - ./bootstrap
     - ./configure
-    - make doxygen
+    - make sphinx-manpages
 python:
    install:
    - requirements: doc/user_guide/requirements.txt
