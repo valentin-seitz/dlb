@@ -5,6 +5,9 @@ version: 2
 
 formats: [pdf,htmlzip]
 
+sphinx:
+  configuration: doc/user_guide/source/conf.py
+
 build:
   os: ubuntu-22.04
   tools:
@@ -16,20 +19,17 @@ build:
     - graphviz
   jobs:
     pre_build:
+    - rm doc/user_guide/source/conf.py
     - ./bootstrap
     - ./configure
+    post_build:
+    - mkdir -p $READTHEDOCS_OUTPUT/html/ && mkdir -p $READTHEDOCS_OUTPUT/pdf/
+    - rm -rf $READTHEDOCS_OUTPUT/html/* && rm -rf $READTHEDOCS_OUTPUT/pdf/*
     - make doxygen
-    build:
-      html:
-        - mkdir -p $READTHEDOCS_OUTPUT/html/ 
-        - rm -rf $READTHEDOCS_OUTPUT/html/*
-        - make html
-        - mv doc/user_guide/html/* $READTHEDOCS_OUTPUT/html
-      pdf:
-        - mkdir -p $READTHEDOCS_OUTPUT/pdf/ 
-        - rm -rf $READTHEDOCS_OUTPUT/pdf/*
-        - make pdf
-        - mv doc/user_guide/pdf/DLBUserGuide.pdf $READTHEDOCS_OUTPUT/pdf
+    - make html
+    - mv doc/user_guide/html/* $READTHEDOCS_OUTPUT/html
+    - make pdf
+    - mv doc/user_guide/pdf/DLBUserGuide.pdf $READTHEDOCS_OUTPUT/pdf
 
 python:
    install:
