@@ -18,7 +18,7 @@ import shlex
 
 #import the autotools generated version
 
-from dlb_version import DLB_VERSION
+from dlb_version import DLB_VERSION, DLB_HAS_MANPAGES
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
