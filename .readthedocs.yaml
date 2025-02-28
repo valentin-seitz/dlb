@@ -16,10 +16,11 @@ build:
     - autotools-dev
     - autoconf
     - libtool
-    - graphviz
   jobs:
     post_checkout:
       - git fetch --unshallow || true
+      - git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' || true
+      - git fetch --all --tags || true
     pre_build:
     - ./bootstrap
     - ./configure
